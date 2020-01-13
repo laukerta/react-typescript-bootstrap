@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
+    jest: true
   },
   extends: [
     // adds rules from create-react-app bootstrap tool
@@ -10,6 +11,8 @@ module.exports = {
     'eslint:recommended',
     // adds recommended react (jsx/tsx) rules
     'plugin:react/recommended',
+    // adds recommended jest rules
+    'plugin:jest/recommended',
     // disables javascript rules from eslint:recommended conflicting with typescript
     'plugin:@typescript-eslint/eslint-recommended',
     // adds recommended typescript rules
@@ -40,7 +43,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json']
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', 'jest', '@typescript-eslint'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': [
       'error',
