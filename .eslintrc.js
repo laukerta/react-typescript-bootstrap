@@ -15,7 +15,13 @@ module.exports = {
     // adds recommended typescript rules
     'plugin:@typescript-eslint/recommended',
     // adds additional typescript rules which require type checking support
-    'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    // disables stylistic javascript rules which conflict with prettier
+    'prettier',
+    // disables stylistic react (jsx/tsx) rules which conflict with prettier
+    'prettier/react',
+    // disables stylistic typescript rules which conflict with prettier
+    'prettier/@typescript-eslint'
   ],
   globals: {
     Atomics: 'readonly',
