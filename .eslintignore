@@ -1,0 +1,16 @@
+# ignore static files
+/public
+
+# ignore generated production files
+/build
+
+# don't code coverage output
+/coverage
+
+package.json
+package-lock.json
+tsconfig.json
+
+*.md
+*.svg
+*.css
