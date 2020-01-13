@@ -11,7 +11,9 @@ module.exports = {
     // adds recommended react (jsx/tsx) rules
     'plugin:react/recommended',
     // disables javascript rules from eslint:recommended conflicting with typescript
-    'plugin:@typescript-eslint/eslint-recommended'
+    'plugin:@typescript-eslint/eslint-recommended',
+    // adds recommended typescript rules
+    'plugin:@typescript-eslint/recommended'
   ],
   globals: {
     Atomics: 'readonly',
@@ -26,5 +28,10 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', '@typescript-eslint'],
-  rules: {}
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      { allowExpressions: true, allowTypedFunctionExpressions: true }
+    ]
+  }
 };
