@@ -1,0 +1,16 @@
+# ignore static files
+/public
+
+# ignore generated production files
+/build
+
+# don't code coverage output
+/coverage
+
+.editorconfig
+.gitignore
+.prettierignore
+.eslintignore
+
+# ignore all svg files
+*.svg
