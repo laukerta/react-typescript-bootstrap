@@ -13,7 +13,9 @@ module.exports = {
     // disables javascript rules from eslint:recommended conflicting with typescript
     'plugin:@typescript-eslint/eslint-recommended',
     // adds recommended typescript rules
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    // adds additional typescript rules which require type checking support
+    'plugin:@typescript-eslint/recommended-requiring-type-checking'
   ],
   globals: {
     Atomics: 'readonly',
@@ -25,7 +27,12 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
+    // 'tsconfigRootDir' and 'project' are needed for proper type checking support
+    // needed for 'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    // NOTE: these configs double the time for linting the project
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json']
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
