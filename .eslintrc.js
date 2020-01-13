@@ -7,6 +7,8 @@ module.exports = {
   extends: [
     // adds rules from create-react-app bootstrap tool
     'react-app',
+    // adds airbnb typescript rules
+    'airbnb-typescript',
     // adds recommended javascript rules
     'eslint:recommended',
     // adds recommended react (jsx/tsx) rules
@@ -45,6 +47,10 @@ module.exports = {
   },
   plugins: ['react', 'jest', '@typescript-eslint'],
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['src/setupTests.ts', '**/*.test.tsx'] }
+    ],
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       { allowExpressions: true, allowTypedFunctionExpressions: true }
