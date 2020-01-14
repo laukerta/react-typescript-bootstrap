@@ -55,5 +55,13 @@ module.exports = {
       'error',
       { allowExpressions: true, allowTypedFunctionExpressions: true }
     ]
-  }
+  },
+  overrides: [
+    {
+      files: ['*.test.tsx'],
+      rules: {
+        '@typescript-eslint/no-non-null-assertion': 'off'
+      }
+    }
+  ]
 };
