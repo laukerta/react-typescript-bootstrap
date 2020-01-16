@@ -55,6 +55,7 @@ module.exports = {
       'error',
       { allowExpressions: true, allowTypedFunctionExpressions: true }
     ],
+    '@typescript-eslint/member-ordering': 'error',
     'functional/immutable-data': 'error',
     'functional/no-let': 'error',
     'functional/prefer-type-literal': 'error'
