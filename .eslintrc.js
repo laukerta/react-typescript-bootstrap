@@ -45,7 +45,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json']
   },
-  plugins: ['react', 'jest', '@typescript-eslint'],
+  plugins: ['react', 'jest', '@typescript-eslint', 'functional'],
   rules: {
     'import/no-extraneous-dependencies': [
       'error',
@@ -54,7 +54,10 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       { allowExpressions: true, allowTypedFunctionExpressions: true }
-    ]
+    ],
+    'functional/immutable-data': 'error',
+    'functional/no-let': 'error',
+    'functional/prefer-type-literal': 'error'
   },
   overrides: [
     {
