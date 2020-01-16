@@ -1,0 +1,2 @@
+# ignore dependencies of e2e test sub-project
+/node_modules

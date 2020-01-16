@@ -7,6 +7,9 @@
 # don't code coverage output
 /coverage
 
+# e2e subproject has own linting config
+/e2e
+
 package.json
 package-lock.json
 tsconfig.json
