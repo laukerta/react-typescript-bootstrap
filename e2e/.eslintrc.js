@@ -25,6 +25,7 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/member-ordering': 'error',
+    '@typescript-eslint/no-floating-promises': 'error',
     'lines-between-class-members': 'error'
   }
 };

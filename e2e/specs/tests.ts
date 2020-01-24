@@ -4,7 +4,7 @@ import TestsPageObject from './tests.po';
 describe('Main page e2e tests', () => {
   let page: TestsPageObject;
 
-  beforeAll(async () => {
+  beforeEach(async () => {
     page = new TestsPageObject();
     await page.navigateToHome();
   });
