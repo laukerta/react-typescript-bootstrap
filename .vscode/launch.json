@@ -12,7 +12,7 @@
       "webRoot": "${workspaceFolder}/src"
     },
     {
-      "name": "Debug CRA Tests",
+      "name": "Debug Unit-Tests",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
@@ -23,6 +23,16 @@
       "internalConsoleOptions": "neverOpen",
       "env": { "CI": "true" },
       "disableOptimisticBPs": true
+    },
+    {
+      "name": "Debug E2E-Tests",
+      "type": "node",
+      "request": "launch",
+      "args": ["wdio.conf.js", "--spec", "${file}"],
+      "cwd": "${workspaceFolder}/e2e",
+      "autoAttachChildProcesses": true,
+      "program": "${workspaceRoot}/e2e/node_modules/@wdio/cli/bin/wdio.js",
+      "console": "integratedTerminal"
     }
   ]
 }
