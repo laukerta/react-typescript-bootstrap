@@ -6,27 +6,19 @@ module.exports = {
     jest: true
   },
   extends: [
-    // adds rules from create-react-app bootstrap tool
-    'react-app',
-    // adds airbnb typescript rules
+    // covers rules from eslint, react, react-a11y (covers NOT react-hooks => airbnb/hooks)
     'airbnb-typescript',
-    // adds recommended javascript rules
-    'eslint:recommended',
-    // adds recommended react (jsx/tsx) rules
-    'plugin:react/recommended',
-    // adds recommended jest rules
+    'airbnb/hooks',
     'plugin:jest/recommended',
     // disables javascript rules from eslint:recommended conflicting with typescript
     'plugin:@typescript-eslint/eslint-recommended',
-    // adds recommended typescript rules
     'plugin:@typescript-eslint/recommended',
     // adds additional typescript rules which require type checking support
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    // disables stylistic javascript rules which conflict with prettier
+    // prettier, prettier/react, prettier/@typescript-eslint
+    // disable stylistic rules for javascript, react, typescript
     'prettier',
-    // disables stylistic react (jsx/tsx) rules which conflict with prettier
     'prettier/react',
-    // disables stylistic typescript rules which conflict with prettier
     'prettier/@typescript-eslint'
   ],
   globals: {
@@ -46,7 +38,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json']
   },
-  plugins: ['react', 'jest', '@typescript-eslint', 'functional'],
+  plugins: ['jest', '@typescript-eslint', 'functional'],
   rules: {
     'import/no-extraneous-dependencies': [
       'error',
