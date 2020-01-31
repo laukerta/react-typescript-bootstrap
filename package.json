@@ -36,6 +36,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "prettier-plugin-package": "^0.3.1",
     "react-scripts": "^3.3.0",
@@ -53,6 +55,11 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "jest": {
     "coverageThreshold": {
       "global": {
@@ -68,5 +75,15 @@
         "statements": 0
       }
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --check",
+      "eslint"
+    ],
+    "e2e/specs/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --check",
+      "eslint --config e2e/.eslintrc.js --resolve-plugins-relative-to e2e/ --no-ignore"
+    ]
   }
 }
