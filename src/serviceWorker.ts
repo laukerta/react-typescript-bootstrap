@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -28,13 +27,11 @@ function registerValidSW(swUrl: string, config?: Config): void {
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
-      // eslint-disable-next-line
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
         if (installingWorker == null) {
           return;
         }
-        // eslint-disable-next-line
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {

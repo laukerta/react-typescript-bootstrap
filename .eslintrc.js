@@ -55,9 +55,17 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.test.tsx'],
+      files: ['react-app-env.d.ts'],
       rules: {
-        '@typescript-eslint/no-non-null-assertion': 'off'
+        'spaced-comment': 'off'
+      }
+    },
+    {
+      files: ['serviceWorker.ts'],
+      rules: {
+        'no-console': 'off',
+        'no-param-reassign': 'off',
+        'functional/immutable-data': 'off'
       }
     }
   ]
