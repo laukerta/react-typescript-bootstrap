@@ -11,6 +11,7 @@
 .gitignore
 .prettierignore
 .eslintignore
+.env
 
 # ignore all svg files
 *.svg
