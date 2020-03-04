@@ -6,6 +6,9 @@ module.exports = {
     jest: true
   },
   extends: [
+    // creates consistency with eslint rules of create-react-app
+    // this config extends from create-react-app (see .env file)
+    'react-app',
     // covers rules from eslint, react, react-a11y (covers NOT react-hooks => airbnb/hooks)
     'airbnb-typescript',
     'airbnb/hooks',
